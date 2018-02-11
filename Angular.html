@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
+    <script> 
+    $.ajax({
+        url: "Script.js",
+        dataType: "script",
+        async: false,           
+        success: function () {},
+    });
+    </script>
+  
+</head>
+
+    
+<body ng-app="myApp" ng-controller="myCtrl" ng-keydown="key($event)" ng-init="init()">
+    
+
+<p>steps {{tick}}, food {{score}}</p>
+    
+<div id="game">
+<pre  ng-repeat="x in line track by $index">{{x}}</pre>
+</div>
+
+
+</body>
+</html>
